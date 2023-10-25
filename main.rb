@@ -1,8 +1,7 @@
 require_relative "lib/linkedlist"
 require_relative "lib/linkedlist"
 
-head = Node.new()
-list = LinkedList.new(head)
+list = LinkedList.new()
 
 puts "Initial linked list"
 p list
