@@ -9,3 +9,8 @@ p list
 (1..5).each {|x| list.append(x)}
 puts 'After appending some nodes'
 p list
+
+
+list.prepend(-111)
+puts 'After prepending a negative element'
+p list
