@@ -31,3 +31,15 @@ n = 4
 puts "Does our list contain #{n}?"
 puts list.contains?(n)
 puts sep
+
+puts "Where is #{n}? It is at index #{list.find(n)}"
+puts sep
+
+puts 'Testing the #to_s method:'
+puts list
+puts sep
+
+puts 'Testing the #pop method'
+list.pop
+puts list
+puts sep

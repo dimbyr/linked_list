@@ -58,7 +58,9 @@ class LinkedList
   end
 
   def pop
-    # remove the last node and return it
+    current_node = @head
+    current_node = current_node.next_node until current_node.next_node.nil? || current_node.next_node.next_node.nil?
+    current_node.next_node = nil
   end
 
   def contains?(value)
@@ -74,10 +76,34 @@ class LinkedList
   end
 
   def find(value)
-    # returns the index of value if it is present, nil otherwise
+    return nil unless contains?(value)
+
+    current_node = @head
+    ind = 0
+    until current_node.nil?
+      return ind if current_node.value == value
+
+      ind += 1
+      current_node = current_node.next_node
+    end
+    ind
   end
 
   def to_s
-    # arrange the values in a string and return it
+    string = ''
+    current_node = @head
+    until current_node.nil?
+      string = "#{string}( #{current_node.value} ) -> "
+      current_node = current_node.next_node
+    end
+    "#{string}nil"
+  end
+
+  def insert_at(value, index)
+    # Insert `value` at index `index`
+  end
+
+  def remove_at(index)
+    # remove element at index  `index`
   end
 end
