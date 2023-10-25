@@ -99,6 +99,7 @@ class LinkedList
     "#{string}nil"
   end
 
+  # EXTRA CREDITS
   def insert_at(value, index)
     # Insert `value` at index `index`
   end
