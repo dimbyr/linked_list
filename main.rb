@@ -1,14 +1,14 @@
-require_relative "lib/linkedlist"
+require_relative 'lib/linkedlist'
 
-sep = "="*20
+sep = '=' * 20
 
-list = LinkedList.new()
+list = LinkedList.new
 
 puts "Initial linked list, with size #{list.size}"
 p list
 puts sep
 
-(1..5).each {|x| list.append(x)}
+(1..5).each { |x| list.append(x) }
 puts "After appending some nodes, the size is: #{list.size}"
 p list
 puts sep
@@ -18,7 +18,7 @@ puts "After prepending 0, the size is #{list.size}"
 p list
 puts sep
 
-puts "The tail of the list is"
+puts 'The tail of the list is'
 p list.tail
 puts sep
 
