@@ -26,3 +26,8 @@ index = -2
 puts "At index #{index}  we have the node:"
 p list.at(index)
 puts sep
+
+n = 4
+puts "Does our list contain #{n}?"
+puts list.contains?(n)
+puts sep
