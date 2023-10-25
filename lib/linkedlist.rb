@@ -61,6 +61,7 @@ class LinkedList
   end
 
   def pop 
+    # remove the last node and return it
   end
 
   def contains?(value)
@@ -72,5 +73,13 @@ class LinkedList
       current_node = current_node.next_node
     end
     return false
+  end
+
+  def find(value)
+    #returns the index of value if it is present, nil otherwise
+  end
+  
+  def to_s
+    #arrange the values in a string and return it
   end
 end
