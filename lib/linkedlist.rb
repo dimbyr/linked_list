@@ -102,6 +102,19 @@ class LinkedList
   # EXTRA CREDITS
   def insert_at(value, index)
     # Insert `value` at index `index`
+    unless index.is_a?(Integer) && index.positive?
+      return 'Invalid index'
+    end
+    if index.zero? 
+      prepend(value)
+    elsif index >= size
+      append(value)
+    else
+      current_node = @head
+      (index-1).times {current_node = current_node.next_node}
+      node_to_insert = Node.new(value, current_node.next_node)
+      current_node.next_node = node_to_insert
+    end
   end
 
   def remove_at(index)

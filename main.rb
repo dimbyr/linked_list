@@ -43,3 +43,10 @@ puts 'Testing the #pop method'
 list.pop
 puts list
 puts sep
+
+chr = 'InserteD'
+i = 3
+puts "Now we inserted '#{chr}' at index #{i}"
+list.insert_at(chr, i)
+puts list
+puts sep
