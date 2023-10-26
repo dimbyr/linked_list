@@ -101,10 +101,8 @@ class LinkedList
 
   # EXTRA CREDITS
   def insert_at(value, index)
-    # Insert `value` at index `index`
-    unless index.is_a?(Integer) && index.positive?
-      return 'Invalid index'
-    end
+    return 'Invalid index' unless index.is_a?(Integer) && index.positive?
+
     if index.zero? 
       prepend(value)
     elsif index >= size
@@ -118,6 +116,16 @@ class LinkedList
   end
 
   def remove_at(index)
-    # remove element at index  `index`
+    if index.zero?
+      @head = @head.next
+    else
+      current_node = @head
+      current_index = 0
+      until current_index == index - 1
+        current_node = current_node.next_node
+        current_index += 1
+      end
+      current_node.next_node = current_node.next_node.next_node
+    end 
   end
 end

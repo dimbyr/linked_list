@@ -50,3 +50,8 @@ puts "Now we inserted '#{chr}' at index #{i}"
 list.insert_at(chr, i)
 puts list
 puts sep
+
+puts "Deleted at #{i}"
+list.remove_at(i)
+puts list
+puts sep
